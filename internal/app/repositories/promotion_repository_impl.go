@@ -15,7 +15,7 @@ func NewPromotionRepository(db *gorm.DB) PromotionRepository {
 	}
 }
 
-func (repository *PromotionRepositoryImpl) CreatePromotion(promo models.Promotion) (models.Promotion, error) {
+func (r *PromotionRepositoryImpl) CreatePromotion(promo models.Promotion) (models.Promotion, error) {
 	panic("implement me!")
 }
 
