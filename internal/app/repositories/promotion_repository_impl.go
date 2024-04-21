@@ -9,7 +9,7 @@ type PromotionRepositoryImpl struct {
 	db *gorm.DB
 }
 
-func NewPromotionRepository(db *gorm.DB) PromotionRepository {
+func NewPromotionRepository(db *gorm.DB) *PromotionRepositoryImpl {
 	return &PromotionRepositoryImpl {
 		db: db,
 	}
