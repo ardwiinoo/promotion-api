@@ -6,31 +6,31 @@ import (
 )
 
 type PromotionServiceImpl struct {
-	Repository *repositories.PromotionRepository
+	Repository *repositories.PromotionRepositoryImpl
 }
 
-func NewPromotionService(promotionRepo *repositories.PromotionRepository) *PromotionServiceImpl {
+func NewPromotionService(promotionRepo *repositories.PromotionRepositoryImpl) *PromotionServiceImpl {
 	return &PromotionServiceImpl{
 		Repository: promotionRepo,
 	}
 }
 
 func (s *PromotionServiceImpl) CreatePromotion(promo models.Promotion) (models.Promotion, error) {
-	panic("implement me!")	
+	return s.Repository.CreatePromotion(promo)
 }
 
 func (s *PromotionServiceImpl) GetAllPromotions() ([]models.Promotion, error) {
-	return s.GetAllPromotions()
+	return s.Repository.GetAllPromotions()
 }
 
 func (s *PromotionServiceImpl) GetPromotionbyPromotionID(promotionID string) (models.Promotion, error) {
-	panic("implement me!")	
+	return s.Repository.GetPromotionbyPromotionID(promotionID)
 }
 
 func (s *PromotionServiceImpl) UpdatePromotionbyPromotionID(promo models.Promotion) (models.Promotion, error) {
-	panic("implement me!")	
+	return s.Repository.UpdatePromotionbyPromotionID(promo)
 }
 
 func (s *PromotionServiceImpl) DeletePromotionbyPromotionID(promotionID string) error {
-	panic("implement me!")	
+	return s.Repository.DeletePromotionbyPromotionID(promotionID)
 }
