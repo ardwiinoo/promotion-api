@@ -15,7 +15,7 @@ func main() {
 	e := echo.New()
 
 	promoRepo := repositories.NewPromotionRepository(db)
-	promoService := services.NewPromotionService(&promoRepo)
+	promoService := services.NewPromotionService(promoRepo)
 
 	delivery.PromotionRoute(e, promoService)
 	e.Logger.Fatal(
